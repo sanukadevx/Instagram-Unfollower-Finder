@@ -41,8 +41,8 @@ class Script {
         }
         if ("RATE_LIMIT" === t && (Script.printMessage("RATE LIMIT: Waiting 15 seconds before requesting again...", "warn"), await new Promise(t => setTimeout(t, 15e3))), "FINISH" === t) {
             if (!this.unfollowers.length)
-                return Script.printMessage("PROCESS FINISHED: Everyone followed you back! 😊", "log");
-            let r = `PROCESS FINISHED: ${this.unfollowers.length} user(s) didn't follow you back. 🤬`;
+                return Script.printMessage("PROCESS FINISHED: Everyone followed you back!", "log");
+            let r = `PROCESS FINISHED: ${this.unfollowers.length} user(s) didn't follow you back.`;
             Script.printMessage(r, "group"), this.unfollowers.forEach(({
                 username: t,
                 isVerified: e
